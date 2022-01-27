@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { Cat } from './components/Cat';
+// import {CatData} from './components/CatData'
+import faker from 'faker'
 
 const App = () => {
 
@@ -23,9 +26,12 @@ const App = () => {
 
     // Apply to hook
     setCat(data);
-    console.log(data);
-    console.log(cat);
+    // console.log(data);
+    // console.log(cat);
 
+
+
+    console.log(faker.commerce.price(50, 60))
   };
 
   return (
@@ -37,26 +43,9 @@ const App = () => {
             name={cat.name}
             temperament={cat.temperament}/>
           ))}
-       </div>
-    
+          </div>    
   );
 }
 
 
-const Cat = (props) => {
-    return (
-      <div className="cat">
-        <div className="catImg">
-          <img src={props.image} alt={props.name}/>
-        </div>  
-        <div className="cat-name">
-          <h4>{props.name}</h4>
-          <h5>{props.breed}</h5>
-          <h6>{props.temperament}</h6>
-        </div>
-        <h3>£{props.price}</h3>
-        <button>Add to Cart</button>
-      </div>
-    )
-  }
 export default App;
