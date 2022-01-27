@@ -21,7 +21,14 @@ body {
 .catImg img{
   width: 250px;
   height: 250px;
+  margin: 10px;
 }
 
-
+.catlist {
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: repeat(auto, auto);
+	margin: 20px;
+  column-gap: 10px;
+}
 

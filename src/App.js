@@ -37,8 +37,7 @@ const App = () => {
             name={cat.name}
             temperament={cat.temperament}/>
           ))}
-          <p>hi</p>
-      </div>
+       </div>
     
   );
 }
@@ -53,8 +52,8 @@ const Cat = (props) => {
         <div className="cat-name">
           <h4>{props.name}</h4>
           <h5>{props.breed}</h5>
+          <h6>{props.temperament}</h6>
         </div>
-        
         <h3>£{props.price}</h3>
         <button>Add to Cart</button>
       </div>
