@@ -1,0 +1,32 @@
+
+
+.wrapper{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.title{
+    margin: 10px;
+    font-size: 50px;
+    font-family: Mochiy Pop P One, sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    box-sizing: border-box;
+}
+.signin, .cart, .chekout {
+    padding: 5px 20px;
+    border: solid black 2px;
+    border-radius: 5px;
+    margin: 25px 5px;
+    transition: 0.8s;
+}
+
+.signin:hover, .cart:hover, .chekout:hover{
+    color: white;
+    background: rgba(0, 0, 0, 0.877);
+    cursor: pointer;
+}
