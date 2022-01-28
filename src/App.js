@@ -3,6 +3,8 @@ import fetchCatData from './fetchCatData';
 import './App.css';
 import { Cat } from './components/Cat';
 import Navbar from './components/navBar';
+import Basket from './components/Basket';
+
 
 const App = () => {
 
@@ -62,6 +64,7 @@ const App = () => {
               name={cat.name}
               temperament={cat.temperament}/>
             ))}
+            <Basket />
             </div>   
           </div> 
   );
