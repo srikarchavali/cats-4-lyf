@@ -1,5 +1,5 @@
 import React from 'react';
-import faker from 'faker'
+// import faker from 'faker'
 
 export const Cat = (props) => {
   
@@ -14,7 +14,7 @@ export const Cat = (props) => {
         <h6>{props.temperament}</h6>
       </div>
       <h3>£{props.price}</h3>
-      <button>Add to Cart</button>
+      <button className = 'cartButton'>Add to Cart</button>
     </div>
   );
 };
