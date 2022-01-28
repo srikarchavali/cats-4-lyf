@@ -43,15 +43,15 @@ const App = () => {
     // console.log(cat);
   };
 
-  // const singleCat = {
-  //   url: cat[i].url,
-  //   name: catInfo[i].name,
-  //   breed: cat[i].name,
-  //   age: catInfo[i].age,
-  //   gender: catInfo[i].gender,
-  //   country: catInfo[i].country,
-  //   price: catInfo[i].price
-  // }
+  const singleCat = {
+    url: cat[i].url,
+    name: catInfo[i].name,
+    breed: cat[i].name,
+    age: catInfo[i].age,
+    gender: catInfo[i].gender,
+    country: catInfo[i].country,
+    price: catInfo[i].price
+  }
 
   return (
         <div>
@@ -64,7 +64,7 @@ const App = () => {
               name={cat.name}
               temperament={cat.temperament}/>
             ))}
-            <Basket />
+            <Basket name={cat.name} image={cat.image.url} price={cat.price} />
             </div>   
           </div> 
   );
