@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Cat } from './components/Cat';
-// import {CatData} from './components/CatData'
-import faker from 'faker'
+import Navbar from './components/navBar';
 
 const App = () => {
 
@@ -28,22 +27,21 @@ const App = () => {
     setCat(data);
     // console.log(data);
     // console.log(cat);
-
-
-
-    console.log(faker.commerce.price(50, 60))
   };
 
   return (
-        <div className="catlist">
-          {cat.map(cat => (
-          <Cat
-            key={cat.id}
-            image={cat.image.url}
-            name={cat.name}
-            temperament={cat.temperament}/>
-          ))}
-          </div>    
+        <div>
+          <Navbar/>
+          <div className="catlist">
+            {cat.map(cat => (
+            <Cat
+              key={cat.id}
+              image={cat.image.url}
+              name={cat.name}
+              temperament={cat.temperament}/>
+            ))}
+            </div>   
+          </div> 
   );
 }
 
