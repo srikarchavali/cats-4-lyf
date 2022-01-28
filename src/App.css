@@ -27,6 +27,8 @@ body {
   margin: 10px 15px;
   border-radius: 5px;
   background: white;
+  min-height: max-content ;
+  
 }
 .catImg{
   display: flex;
@@ -35,16 +37,17 @@ body {
 }
 .catImg:hover{
   position: relative;
-  bottom: 2px;
+  bottom: 5px;
+  scale: 1.5;
 }
 .catImg img{
   width: 300px;
   height: 280px;
   cursor: pointer;
-
+  border-radius: 20px;
 }
 .catImg:hover{
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, 0.308);
 }
 
 .catlist {
@@ -62,4 +65,11 @@ body {
 	border-radius: 5px;
 	font-size: larger;
 	font-family:cursive;
+	transition: 0.5s smooth;
+}
+.cartButton:hover{
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.836);
+	border: solid rgba(0, 255, 255, 0.555) 3px;
+	scale: 3;	
 }
