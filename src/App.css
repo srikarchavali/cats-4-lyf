@@ -10,6 +10,14 @@
 	--accent-dark: #f9765f;
 }
 
+/* .grid-container {
+	width: 70%;
+	display: grid;
+	margin: 0 auto;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 10px;
+  } */
+
 
 body {
 	display: flex;
@@ -40,6 +48,7 @@ nav {
   width: 250px;
   height: 250px;
   cursor: pointer;
+
 }
 .catImg:hover{
   box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
@@ -52,4 +61,5 @@ nav {
 	grid-template-rows: repeat(auto, auto);
   column-gap: 10px;
 }
+
 
