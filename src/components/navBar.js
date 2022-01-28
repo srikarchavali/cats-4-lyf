@@ -1,4 +1,4 @@
-// import styledComponents from "styled-components"
+import styledComponents from "styled-components"
 import { FaShoppingCart, FaSignInAlt, FaUserCheck } from "react-icons/fa"
 
 const Navbar = () =>{

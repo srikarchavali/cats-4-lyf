@@ -18,9 +18,8 @@ body {
 	background-color: var(--bg);
 }
 
-nav {
+.navbar {
 	display: inline;
-	padding: 5px, 10px;
 }
 .catwrap{
   width: 300px;
