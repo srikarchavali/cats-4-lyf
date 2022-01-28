@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import fetchCatData from './fetchCatData';
 import './App.css';
 import { Cat } from './components/Cat';
 import Navbar from './components/navBar';
@@ -9,6 +10,17 @@ const App = () => {
 
   // Method
   const [cat, setCat] = useState([]);
+
+  const [catInfo, setCatInfo] = useState([])
+
+  useEffect(() => {
+      const info = fetchCatData();
+      // getCat();
+
+      console.log(info)
+      setCatInfo(info);
+    }, [])
+
   useEffect(() => {
       getCat()
     }, [])
@@ -28,6 +40,16 @@ const App = () => {
     // console.log(data);
     // console.log(cat);
   };
+
+  // const singleCat = {
+  //   url: cat[i].url,
+  //   name: catInfo[i].name,
+  //   breed: cat[i].name,
+  //   age: catInfo[i].age,
+  //   gender: catInfo[i].gender,
+  //   country: catInfo[i].country,
+  //   price: catInfo[i].price
+  // }
 
   return (
         <div>
