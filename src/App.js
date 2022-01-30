@@ -3,78 +3,61 @@ import fetchCatData from './fetchCatData';
 import './App.css';
 import { Cat } from './components/Cat';
 import Navbar from './components/navBar';
-import Basket from './components/Basket';
-import Modal from './components/Modal';
-
 
 const App = () => {
+	//set state, pass them down as props
+	const [cat, setCat] = useState([]);
+	const [catInfo, setCatInfo] = useState([]);
+	const [basketItems, setBasketItems] = useState([]);
 
-  // URL: https://random.dog/woof.json
+	//add cat to basket
+	const addToBasket = (item) => {
+		setBasketItems([...basketItems, item]);
+	};
+	//remove cat from basket funtion using remaining cat id
+	const removeItemFromBasket = (item) => {
+		const remainingBasketItems = basketItems.filter(
+			(cat) => cat.id !== item.id,
+		);
+		setBasketItems(remainingBasketItems);
+	};
 
-  // Method
-  const [cat, setCat] = useState([]);
+	//fetch cat info from cat api and faker
+	useEffect(() => {
+		(async () => {
+			const res = await fetch('https://api.thecatapi.com/v1/breeds?limit=20');
+			const data = await res.json();
+			const info = fetchCatData();
 
-  const [catInfo, setCatInfo] = useState([])
+			setCatInfo(info);
+			setCat(data);
+		})();
+	}, []);
 
-  const [openModal, setOpenModal] = useState(false)
-
-
-  useEffect(() => {
-      const info = fetchCatData();
-      // getCat();
-
-      console.log(info)
-      setCatInfo(info);
-    }, [])
-
-  useEffect(() => {
-      getCat()
-    }, [])
-
-  // Function
-  const getCat = async () => {
-
-    // Request
-    const res = await fetch("https://api.thecatapi.com/v1/breeds?limit=20");
-
-    // JSON
-    const data = await res.json();
-    // console.log(data[0].url);
-
-    // Apply to hook
-    setCat(data);
-    // console.log(data);
-    // console.log(cat);
-  };
-
-  // const singleCat = {
-  //   url: cat[i].url,
-  //   name: catInfo[i].name,
-  //   breed: cat[i].name,
-  //   age: catInfo[i].age,
-  //   gender: catInfo[i].gender,
-  //   country: catInfo[i].country,
-  //   price: catInfo[i].price
-  // }
-
-  return (
-        <div>
-          <Navbar/>
-          <button className="openModalBtn" onClick={() => {setOpenModal(true)}}>Open</button>
-            {openModal && <Modal closeModal={setOpenModal} />}
-          <div className="catlist">
-            {cat.map(cat => (
-            <Cat
-              key={cat.id}
-              image={cat.image.url}
-              name={cat.name}
-              temperament={cat.temperament}/>
-            ))}
-            {/* <Basket name={cat.name} image={cat.image.url} price={cat.price} /> */}
-            </div>   
-          </div> 
-  );
-}
-
+	return (
+		//pass functions and state down as props to components
+		//map method populates a new array
+		<div>
+			<Navbar
+				basketItems={basketItems}
+				removeItemFromBasket={removeItemFromBasket}
+			/>
+			<div className="catlist">
+				{cat.map((cat, i) => (
+					<Cat
+						key={cat.id}
+						id={cat.id}
+						catName={catInfo[i]?.name}
+						image={cat.image.url}
+						name={cat.name}
+						temperament={cat.temperament}
+						price={catInfo[i].price}
+						addToBasket={addToBasket}
+					/>
+				))}
+			</div>
+		</div>
+	);
+};
 
 export default App;

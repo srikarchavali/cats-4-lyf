@@ -1,26 +1,58 @@
-import React from 'react'
-import '../index.css'
+import React, { useState } from 'react';
+import { FaShoppingCart } from 'react-icons/fa';
 
-const Modal = ({closeModal}) => {
-    return (
-        <div className="modalBackground">
-            <div className="modalContainer">
-                <div className="titleCloseBtn">
-                    <button onClick={() => closeModal(false)}>X</button>
-                </div>
-                <div className="title">
-                    <h1>Are you sure?</h1>
-                </div>
-                <div className="body">
-                    <p>The next page is awesome</p>
-                </div>
-                <div className="footer">
-                    <button>Purchace</button>
-                    <button onClick={() => closeModal(false)} id="cancelBtn">Cancel all</button>
-                </div>
-            </div>
-        </div>
-    )
-}
+//pass in props to the component using destructuring (curly braces)
+const Modal = ({ basketItems, removeItemFromBasket }) => {
+	const [modal, setModal] = useState(false);
 
-export default Modal
+	const toggleModal = () => {
+		setModal(!modal);
+	};
+	// function to add total in basket
+	const basketTotal = basketItems.reduce((accumulator, currentItem) => {
+		accumulator += parseFloat(currentItem.price);
+		return accumulator;
+	}, 0);
+
+	if (modal) {
+		document.body.classList.add('active-modal');
+	} else {
+		document.body.classList.remove('active-modal');
+	}
+	// map through the basket items and include button function to remove using on click function
+	//to fixed method adds 2 zeros to the right of the decimal.
+	return (
+		<>
+			<div onClick={toggleModal}>
+				<FaShoppingCart />
+			</div>
+
+			{modal && (
+				<div className="modal">
+					<div onClick={toggleModal} className="overlay"></div>
+					<div className="modal-content">
+						<h2>Shopping Basket</h2>
+						<ul>
+							{basketItems.map((item) => (
+								<li>
+									{item.catName} - {item.price} -{' '}
+									<span
+										onClick={() => {
+											removeItemFromBasket(item);
+										}}>
+										Remove
+									</span>
+								</li>
+							))}
+						</ul>
+						{basketTotal.toFixed(2)}
+						<button className="close-modal" onClick={toggleModal}>
+							CLOSE
+						</button>
+					</div>
+				</div>
+			)}
+		</>
+	);
+};
+export default Modal;
