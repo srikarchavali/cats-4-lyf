@@ -3,12 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-:root {
-	--bg: #efefef;
-	--cat-bg: #ffffff;
-	--accent-light: #ffaa9a;
-	--accent-dark: #f9765f;
-}
 
 /* .grid-container {
 	width: 70%;
@@ -18,48 +12,132 @@
 	grid-gap: 10px;
   } */
 
-
 body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--bg);
+	background-color: white;
+	width: 100%;
 }
 
-nav {
-	display: inline;
-	padding: 5px, 10px;
+.catwrap {
+	width: 300px;
+	margin: 10px 15px;
+	border-radius: 5px;
+	background: white;
 }
-.catwrap{
-  width: 300px;
-  margin: 10px;
-  border-radius: 5px;
+.catImg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.catImg{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.catImg:hover {
+	position: relative;
+	bottom: 2px;
 }
-.catImg:hover{
-  position: relative;
-  bottom: 2px;
+.catImg img {
+	width: 300px;
+	height: 280px;
+	cursor: pointer;
 }
-.catImg img{
-  width: 250px;
-  height: 250px;
-  cursor: pointer;
-
-}
-.catImg:hover{
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
-
+.catImg:hover {
+	box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, 0.2);
 }
 
 .catlist {
 	display: grid;
 	grid-template-columns: repeat(4, auto);
 	grid-template-rows: repeat(auto, auto);
-  column-gap: 10px;
+	column-gap: 5px;
 }
 
+.cartButton {
+	background: black;
+	padding: 5px 10px;
+	color: white;
+	border: solid black 1px;
+	border-radius: 5px;
+	font-size: larger;
+	font-family: cursive;
+}
 
+body.active-modal {
+	overflow-y: hidden;
+}
+
+/* .btn-modal {
+	padding: 10px 20px;
+	display: block;
+	margin: 100px auto 0;
+	font-size: 18px;
+} */
+
+.modal,
+.overlay {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+}
+
+.overlay {
+	background: rgba(49, 49, 49, 0.8);
+}
+.modal-content {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	line-height: 1.4;
+	background: #f1f1f1;
+	padding: 14px 28px;
+	border-radius: 3px;
+	max-width: 600px;
+	min-width: 300px;
+	color: black;
+}
+
+.close-modal {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 5px 7px;
+}
+
+.wrapper {
+	background: white;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.title {
+	margin: 10px;
+	font-size: 50px;
+	font-family: Mochiy Pop P One, sans-serif;
+}
+.navbar {
+	display: flex;
+	justify-content: end;
+	position: relative;
+	box-sizing: border-box;
+}
+.signin,
+.cart,
+.chekout {
+	padding: 5px 20px;
+	border: solid black 2px;
+	border-radius: 5px;
+	margin: 25px 5px;
+	transition: 0.8s;
+}
+
+.signin:hover,
+.cart:hover,
+.chekout:hover {
+	color: white;
+	background: rgba(0, 0, 0, 0.877);
+	cursor: pointer;
+}
