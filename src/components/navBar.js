@@ -1,5 +1,4 @@
 // import styledComponents from "styled-components"
-// import styledComponents from "styled-components"
 import { FaSignInAlt, FaUserCheck, FaCat } from 'react-icons/fa';
 import Modal from './Modal';
 

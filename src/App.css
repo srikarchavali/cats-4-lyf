@@ -26,11 +26,13 @@ body {
 	border-radius: 5px;
 	background: white;
 }
+
 .catImg {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+
 .catImg:hover {
 	position: relative;
 	bottom: 2px;
@@ -40,6 +42,7 @@ body {
 	height: 280px;
 	cursor: pointer;
 }
+
 .catImg:hover {
 	box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, 0.2);
 }
@@ -86,6 +89,7 @@ body.active-modal {
 .overlay {
 	background: rgba(49, 49, 49, 0.8);
 }
+
 .modal-content {
 	position: absolute;
 	top: 40%;
@@ -113,17 +117,20 @@ body.active-modal {
 	justify-content: space-between;
 	width: 100%;
 }
+
 .title {
 	margin: 10px;
 	font-size: 50px;
 	font-family: Mochiy Pop P One, sans-serif;
 }
+
 .navbar {
 	display: flex;
 	justify-content: end;
 	position: relative;
 	box-sizing: border-box;
 }
+
 .signin,
 .cart,
 .chekout {
