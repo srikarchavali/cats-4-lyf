@@ -25,7 +25,7 @@ const App = () => {
 
   // Apply to hook
   setCat(data);
-  // console.log(data);
+  console.log(data);
   // console.log(cat);
   };
 

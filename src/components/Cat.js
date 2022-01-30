@@ -11,10 +11,10 @@ export const Cat = (props) => {
       </div>
       <div className="cat-name">
         <h4>{faker.name.firstName()}</h4>
-        <h5>{props.breed}</h5>
+        <h5>Breed: {props.name}</h5>
         <h6>{props.temperament}</h6>
+        <h3>£{faker.commerce.price(50,200)}</h3>
       </div>
-      <h3>£{faker.commerce.price(50,200)}</h3>
       <button className = 'cartButton'>Add to Cart</button>
     </div>
   );

@@ -21,11 +21,13 @@ body {
   border-radius: 5px;
   background: white;
   min-height: max-content ;
+  line-height: 20px;
 }
 .catImg{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5px;
 }
 .catImg:hover{
   position: relative;
@@ -64,4 +66,10 @@ body {
 	background: rgba(0, 0, 0, 0.836);
 	border: solid rgba(0, 255, 255, 0.555) 3px;
 	scale: 3;	
+}
+
+.cat-name{
+	margin: 10px;
+	font-family: sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }

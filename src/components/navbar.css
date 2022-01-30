@@ -7,9 +7,35 @@
     width: 100%;
 }
 .title{
-    margin: 10px;
+    margin: 20px;
     font-size: 60px;
     font-family: 'Dancing Script', cursive;
+}
+.covercontent{
+    margin: 5px 20px;
+    display: flex;
+    justify-content:space-around;
+    height: 500px;
+    overflow: hidden;
+}
+.covertext{
+    /* background: rgba(255, 127, 80, 0.363); */
+    font-family: cursive;
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 5px;
+    width: 50%;
+}
+.catgroupimg{
+    width: 60%;
+    height: 800px;
+    object-fit: cover;
+    position: relative;
+    bottom: 200px;
+    object-position: 45% ;
+    
 }
 .navbar {
     display: flex;
@@ -21,7 +47,7 @@
     padding: 5px 20px;
     border: solid black 2px;
     border-radius: 5px;
-    margin: 25px 5px;
+    margin: 40px 5px;
     transition: 0.8s;
 }
 
