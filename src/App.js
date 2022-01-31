@@ -21,7 +21,7 @@ const App = () => {
 		);
 		setBasketItems(remainingBasketItems);
 	};
-	
+
 	//fetch cat info from cat api and faker
 	useEffect(() => {
 		(async () => {

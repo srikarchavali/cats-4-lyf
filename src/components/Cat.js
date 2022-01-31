@@ -21,6 +21,7 @@ export const Cat = ({
 				<h5>{temperament}</h5>
 				<h3>£{price}</h3>
 			</div>
+
 			<button
 				className="cartButton"
 				onClick={() => {

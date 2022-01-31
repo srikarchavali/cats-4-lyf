@@ -20,6 +20,12 @@ body {
 	width: 100%;
 }
 
+.catwrap {
+	width: 300px;
+	margin: 10px 15px;
+	border-radius: 5px;
+	background: white;
+}
 
 .catwrap {
 	width: 300px;
@@ -49,6 +55,7 @@ body {
 	box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, 0.308);
   }
 
+
 .catlist {
 	display: grid;
 	grid-template-columns: repeat(4, auto);
@@ -74,6 +81,7 @@ body {
 	border: solid rgba(0, 255, 255, 0.555) 3px;
 	transform:scale(1.05);
 }
+
 body.active-modal {
 	overflow-y: hidden;
 }
@@ -165,6 +173,7 @@ body.active-modal {
 .total{
 	color: rgb(218, 33, 33);
 	text-align: center;
+
 }
 .bin{
 	cursor: pointer;
