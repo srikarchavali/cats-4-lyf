@@ -3,7 +3,7 @@ import { FaShoppingCart, FaSignInAlt, FaUserCheck, FaCat} from "react-icons/fa"
 import './navbar.css'
 
 const Navbar = () =>{
-    return(
+    return( 
         <div className="navBarWrap">
             <div className="wrapper">
                 <h3 className="title"><FaCat/>Cats4Lyf </h3>

@@ -28,6 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 5px;
+  transition: 0.5s;
 }
 .catImg:hover{
   position: relative;
