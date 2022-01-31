@@ -17,11 +17,11 @@ export const Cat = ({
 			</div>
 			<div className="cat-name">
 				<h4>{catName}</h4>
-				<h4>{name}</h4>
-				<h5>{breed}</h5>
-				<h6>{temperament}</h6>
+				<h4>Breed: {name}</h4>
+				<h5>{temperament}</h5>
+				<h3>£{price}</h3>
 			</div>
-			<h3>£{price}</h3>
+
 			<button
 				className="cartButton"
 				onClick={() => {

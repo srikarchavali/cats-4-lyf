@@ -1,5 +1,4 @@
 
-
 .wrapper{
     background: white;
     display: flex;
@@ -7,10 +6,36 @@
     width: 100%;
 }
 .title{
-    margin: 10px;
-    font-size: 50px;
-    font-family: Mochiy Pop P One, sans-serif;
+    margin: 20px;
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
 }
+.covercontent{
+    margin: 5px 20px;
+    display: flex;
+    justify-content:space-around;
+    height: 500px;
+    overflow: hidden;
+}
+.covertext{
+    /* background: rgba(255, 127, 80, 0.363); */
+    font-family: cursive;
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 5px;
+    width: 50%;
+}
+.catgroupimg img{
+    width: 60%;
+    height: 800px;
+    object-fit: cover;
+    position: relative;
+    bottom: 200px;
+    object-position: 45% ; 
+}
+
 .navbar {
     display: flex;
     justify-content: end;
@@ -29,4 +54,15 @@
     color: white;
     background: rgba(0, 0, 0, 0.877);
     cursor: pointer;
+}
+
+.notification {
+    position: absolute;
+    bottom: 60px;
+    left: 180px;
+    background: rgba(0, 0, 0, 0.877);
+    color: white;
+    padding: 0 8px;
+    border-radius: 50%;
+    border:none
 }

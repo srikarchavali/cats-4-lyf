@@ -27,25 +27,34 @@ body {
 	background: white;
 }
 
-.catImg {
+.catwrap {
+	width: 300px;
+	margin: 10px 15px;
+	border-radius: 5px;
+	background: white;
+	min-height: max-content ;
+	line-height: 20px;
+}
+
+.catImg{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
+	margin-bottom: 5px;
+	transition: 0.5s smooth;
+  }
 
-.catImg:hover {
-	position: relative;
-	bottom: 2px;
-}
-.catImg img {
+  .catImg img{
 	width: 300px;
 	height: 280px;
 	cursor: pointer;
-}
+	border-radius: 20px;
+  }
+  .catImg img:hover{
+	transform:scale(1.05);
+	box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, 0.308);
+  }
 
-.catImg:hover {
-	box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, 0.2);
-}
 
 .catlist {
 	display: grid;
@@ -61,7 +70,16 @@ body {
 	border: solid black 1px;
 	border-radius: 5px;
 	font-size: larger;
-	font-family: cursive;
+	font-family:cursive;
+	transition: 0.5s smooth;
+	margin-top: 5px;
+}
+
+.cartButton:hover{
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.836);
+	border: solid rgba(0, 255, 255, 0.555) 3px;
+	transform:scale(1.05);
 }
 
 body.active-modal {
@@ -88,6 +106,7 @@ body.active-modal {
 
 .overlay {
 	background: rgba(49, 49, 49, 0.8);
+	cursor: default;
 }
 
 .modal-content {
@@ -98,37 +117,35 @@ body.active-modal {
 	line-height: 1.4;
 	background: #f1f1f1;
 	padding: 14px 28px;
-	border-radius: 3px;
+	border-radius: 10px;
 	max-width: 600px;
 	min-width: 300px;
 	color: black;
+	border: solid 2px white;
+	cursor: default;
 }
-
+.itemList{
+	text-align: justify;
+	line-height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+}
 .close-modal {
 	position: absolute;
-	top: 10px;
+	top: 20px;
 	right: 10px;
-	padding: 5px 7px;
+	cursor: pointer;
+	border:none;
 }
-
-.wrapper {
-	background: white;
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
+.close-modal:hover{
+	transform: scale(1.5);
 }
-
-.title {
-	margin: 10px;
-	font-size: 50px;
-	font-family: Mochiy Pop P One, sans-serif;
+.bin:hover{
+	transform: scale(1.5);
 }
-
-.navbar {
-	display: flex;
-	justify-content: end;
-	position: relative;
-	box-sizing: border-box;
+.shop{
+	margin-bottom: 10px;
+	text-decoration: underline;
+	font-family: cursive;
 }
 
 .signin,
@@ -146,5 +163,18 @@ body.active-modal {
 .chekout:hover {
 	color: white;
 	background: rgba(0, 0, 0, 0.877);
+	cursor: pointer;
+}
+.cat-name{
+	margin: 10px;
+	font-family: sans-serif;
+	font-family: 'Montserrat', sans-serif;
+}
+.total{
+	color: rgb(218, 33, 33);
+	text-align: center;
+
+}
+.bin{
 	cursor: pointer;
 }
